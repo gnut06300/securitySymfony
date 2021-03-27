@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	{% for label, messages in app.flashes %}
+    {% for message in messages %}
+        <div class="p-3 my-2 rounded-2 {{ label }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
+<h1>Sécurity Symfony</h1>
+{% endblock %}
