@@ -91,14 +91,14 @@ class RegistrationController extends AbstractController
                     ->htmlTemplate('registration/confirmation_email.html.twig')
             );
             //$this->addFlash('verify_email_error', $exception->getReason());
-            $this->addFlash('danger', "votre email à expiré un nouveau à été envoyé");
+            $this->addFlash('error', "votre email à expiré un nouveau à été envoyé");
 
             //return $this->redirectToRoute('app_register');
             return $this->redirectToRoute('home');
         }
 
         // @TODO Change the redirect on success and handle or remove the flash message in your templates
-        $this->addFlash('error', 'Your email address has been verified.');
+        $this->addFlash('error', 'Votre adresse e-mail a été vérifiée.');
 
         return $this->redirectToRoute('home');
     }
